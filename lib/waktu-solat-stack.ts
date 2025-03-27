@@ -10,6 +10,8 @@ import path from 'path';
 import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
 
 export class WaktuSolatStack extends cdk.Stack {
+    public readonly waktuSolatTable: dynamodb.Table;
+
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
 
@@ -21,6 +23,8 @@ export class WaktuSolatStack extends cdk.Stack {
             timeToLiveAttribute: 'ttl',
             removalPolicy: cdk.RemovalPolicy.DESTROY,
         });
+
+        this.waktuSolatTable = table;
 
         // Create SQS queue
         const queue = new sqs.Queue(this, 'WaktuSolatQueue', {

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "cdk": "cdk",
-    "deploy": "cdk deploy --profile hakim-tech --outputs-file outputs.json",
+    "deploy": "cdk deploy --profile hakim-tech --all --outputs-file outputs.json",
     "destroy": "cdk destroy --profile hakim-tech",
     "synth": "cdk synth --profile hakim-tech",
     "test": "ts-node lambda/test.ts"
