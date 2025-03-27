@@ -1,0 +1,39 @@
+{
+  "name": "waktu-solat-fetcher-node",
+  "version": "1.0.0",
+  "description": "AWS CDK project for fetching and storing waktu solat data",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "cdk": "cdk",
+    "deploy": "cdk deploy --profile hakim-tech --outputs-file outputs.json",
+    "destroy": "cdk destroy --profile hakim-tech",
+    "synth": "cdk synth --profile hakim-tech",
+    "test": "ts-node lambda/test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.5",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.148",
+    "@types/node": "22.13.13",
+    "aws-cdk": "2.1006.0",
+    "aws-cdk-lib": "2.185.0",
+    "constructs": "10.4.2",
+    "esbuild": "^0.25.1",
+    "ts-node": "^10.9.2",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.775.0",
+    "@aws-sdk/client-sqs": "^3.775.0",
+    "@aws-sdk/lib-dynamodb": "^3.775.0",
+    "date-fns": "^4.1.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
