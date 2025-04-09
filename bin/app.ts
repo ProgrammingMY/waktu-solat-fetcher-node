@@ -2,7 +2,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { WaktuSolatStack } from '../lib/waktu-solat-stack';
 import { PrayerTimesApiStack } from '../lib/api-stack';
-import { CertificateStack } from '../lib/certification-stack';
 
 const app = new cdk.App();
 

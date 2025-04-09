@@ -106,7 +106,7 @@ export const fetchData = async (relativeMonth: number): Promise<any> => {
 export const handler = async (event: ScheduledEvent, context: Context): Promise<any> => {
   try {
     // Fetch next month's data
-    await fetchData(0);
+    await fetchData(1);
 
     return {
       statusCode: 200,
